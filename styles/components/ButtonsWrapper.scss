@@ -1,0 +1,10 @@
+.buttons-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacer);
+	justify-content: flex-end;
+
+	&.space-between {
+		justify-content: space-between;
+	}
+}
