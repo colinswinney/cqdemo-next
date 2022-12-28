@@ -1,9 +1,10 @@
-export default function CodeBlock({ children, className, ...restProps }) {
+export default function CodeBlock({ children, className, lang, ...restProps }) {
+	const language = lang ? "language-" + lang : "language-css";
 	return (
 		<pre
-			className={`wp-block-code alignwide${className ? " " + className : ""}`}
+			className={`wp-block-code${className ? " " + className : ""}`}
 		>
-			<code className="language-css" {...restProps}>
+			<code className={language} {...restProps}>
 				{children}
 			</code>
 		</pre>
