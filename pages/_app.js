@@ -1,16 +1,19 @@
 import { useEffect } from "react";
-import hljs from "highlight.js";
+import prism from "prismjs";
 
 // styles
-import "../styles/reset.css";
-import "highlight.js/styles/a11y-dark.css";
-import "../styles/globals.css";
+import "prismjs/themes/prism-okaidia.css";
+import "../styles/index.scss";
 
 
 export default function App({ Component, pageProps }) {
 	useEffect(() => {
-		hljs.highlightAll();
+		prism.highlightAll();
 	}, []);
 
-	return <Component {...pageProps} />;
+	return (
+		<>
+			<Component {...pageProps} />
+		</>
+	);
 }
