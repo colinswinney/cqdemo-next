@@ -7,7 +7,7 @@ export default function ImageBlock({className, ...restProps}) {
 			className={`wp-block-image${className ? " " + className : ""}`}
 			{...restProps}
 		>
-			<Image src={puppies} alt="Six husky puppies posed for a portrait" />
+			<Image src={puppies} alt="Six husky puppies posed for a portrait" priority />
 			<figcaption>Adopt a pet</figcaption>
 		</figure>
 	);

@@ -17,7 +17,7 @@ export default function LessonThree() {
 		target.style.color =
 			target.getAttribute("aria-pressed") === "true"
 				? "var(--c-green)"
-				: "var(--c-red)";
+				: "var(--c-primary)";
 		groups.forEach((group) => {
 			group.classList.toggle("is-inline-size");
 		});
@@ -30,7 +30,6 @@ export default function LessonThree() {
 				metaTitle="Lesson Three"
 				title="<span>Lesson Three </span>Inline Size ↔️"
 			>
-				<SpacerBlock />
 				<h2>The Basics</h2>
 				<p>
 					Establishes a query container for dimensional queries on the inline

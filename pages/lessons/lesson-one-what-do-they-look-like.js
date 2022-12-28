@@ -11,7 +11,6 @@ export default function LessonOne() {
 				metaTitle="Lesson One"
 				title="<span>Lesson One </span>What Do They Look Like? 🧐"
 			>
-				<SpacerBlock />
 				<h2>The Basics</h2>
 				<p>
 					A <strong>@container</strong> query looks just like a{" "}

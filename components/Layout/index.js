@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import SpacerBlock from "../SpacerBlock"
 
 export default function Layout({ children, metaDescription, metaTitle, title }) {
 	return (
@@ -27,7 +28,7 @@ export default function Layout({ children, metaDescription, metaTitle, title }) 
 				<nav>
 					<ul>
 						<li>
-							<Link href="/lesson-one">
+							<Link href="/lessons/lesson-one-what-do-they-look-like">
 								Lesson One - What Do They Look Like?
 							</Link>
 						</li>

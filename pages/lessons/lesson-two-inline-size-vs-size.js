@@ -15,7 +15,7 @@ export default function LessonTwo() {
 		target.style.color =
 			target.getAttribute("aria-pressed") === "true"
 				? "var(--c-green)"
-				: "var(--c-red)";
+				: "var(--c-primary)";
 		groups.forEach(group => {
 			group.classList.toggle('is-inline-size');
 		});
