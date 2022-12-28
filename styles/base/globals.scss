@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;500;900&display=swap');
+@import "./variables.scss";
+
+#__next {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	background-color: var(--c-white);
+	color: var(--c-black);
+	font-family: 'Work Sans', sans-serif;
+	font-size: var(--fs-0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 900;
+	line-height: 1.2;
+}
+
+h1 {
+	color: var(--c-primary);
+	font-size: var(--fs-5);
+	margin-top: 1em;
+
+	span {
+		color: var(--c-black);
+		display: block;
+		font-size: 0.33em;
+		font-weight: 500;
+	}
+}
+
+h2 {
+	font-size: var(--fs-4);
+}
+
+h3 {
+	font-size: var(--fs-3);
+}
+
+h4 {
+	font-size: var(--fs-2);
+}
+
+h5 {
+	font-size: var(--fs-1);
+}
+
+h6 {
+	font-size: var(--fs-0);
+}
+
+strong {
+	font-weight: 900;
+}
+
+a {
+	color: var(--c-primary);
+	text-decoration-color: transparent;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.1em;
+	transition: all 0.2s ease-in-out;
+
+	&:hover,
+	&:focus-visible {
+		text-decoration-color: var(--c-primary);
+	}
+}
+
+pre {
+	white-space: pre-line;
+}
+
+pre[class*="language-"] {
+	margin-bottom: 1.5rem;
+	margin-top: 0;
+}
+
+img {
+	height: auto;
+}
+
+button {
+	background-color: transparent;
+	border: 2px solid currentColor;
+	color: var(--c-red);
+	padding: 0.5em 1em;
+
+	&:hover,
+	&:focus-visible {
+		text-decoration: underline;
+	}
+}
