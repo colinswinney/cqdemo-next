@@ -1,0 +1,15 @@
+body {
+	font-size: 1.5rem;
+}
+
+pre {
+	white-space: pre-line;
+}
+
+.hljs-attribute {
+	padding-left: 2em;
+}
+
+.hljs-keyword + .hljs-attribute {
+	padding-left: 0;
+}
