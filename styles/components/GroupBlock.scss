@@ -1,6 +1,12 @@
 .wp-block-group {
+	margin: 0;
 
 	&.is-inline-size {
 		container: wp-block-group / inline-size;
+	}
+
+	&.is-size {
+		container: wp-block-group / size;
+		height: 50vh;
 	}
 }

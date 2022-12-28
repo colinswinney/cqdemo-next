@@ -7,10 +7,11 @@
 	width: 100%;
 
 	&::after {
-		background-color: var(--c-red, rgb(0 0 180 / 50%));
+		background-color: var(--c-primary);
 		content: "";
 		display: block;
 		inset: 0;
+		opacity: 0.5;
 		position: absolute;
 		z-index: 1;
 	}
@@ -24,7 +25,8 @@
 
 	& figcaption {
 		color: var(--c-white);
-		font-size: 15cqb;
+		// font-size: 15cqb;
+		font-size: 4rem;
 		font-weight: 900;
 		inset: 0 0 auto 0;
 		line-height: 1;
@@ -38,6 +40,13 @@
 		&::before,
 		&::after {
 			color: rgb(255 255 0);
+		}
+	}
+
+	@container wp-block-group (height > 300px) {
+
+		&::after {
+			background-color: var(--c-blue);
 		}
 	}
 }
