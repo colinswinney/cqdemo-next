@@ -1,69 +1,37 @@
 import { useState } from "react";
+import Check from "../SVG/Check";
+import Close from "../SVG/Close";
+import { buttonStyles } from "../../utilities/buttonStyles";
 
-export default function Button(props) {
-
-	const {
-		alignfull,
-		alignwide,
-		className,
-		label,
-		maxHeight,
-		target,
-		...restProps
-	} = props;
+export default function ButtonAlignfull(props) {
+	const { className, clickHandler, label, maxHeight, target, ...restProps } = props;
 
 	const [isAriaPressed, setIsAriaPressed] = useState(false);
 
-	function handleToggleClass(element, className, height) {
-		if (className) {
-			element.classList.toggle(className);
-		}
-
-		if (height) {
-			element.style.maxHeight = isAriaPressed ? "none" : height + "px";
-		}
-	}
-
 	function handleClick(e) {
-		setIsAriaPressed(!isAriaPressed);
-
 		const clickedBtn = e.target;
 		const targetEl = document.getElementById(target);
-		const alignClass = alignwide ? "alignwide" : alignfull ? "alignfull" : null;
+		setIsAriaPressed(!isAriaPressed);
+		buttonStyles(clickedBtn, isAriaPressed);
 
-		// button styles
-		clickedBtn.style.color = isAriaPressed
-			? `var(--c-primary)`
-			: `var(--c-white)`;
-		clickedBtn.style.backgroundColor = isAriaPressed
-			? `transparent`
-			: `var(--c-green)`;
-		clickedBtn.style.borderColor = isAriaPressed
-			? `currentColor`
-			: `var(--c-green)`;
-
-		if (!targetEl) {
-			return;
+		if (clickHandler === 'alignfull' && targetEl) {
+			targetEl.classList.toggle("alignfull");
 		}
 
-		if (alignwide && alignfull) {
-			console.error('Button Component error - Must use only one align prop, alignwide OR alignfull')
-			return;
+		if (clickHandler === 'maxHeight' && targetEl && maxHeight) {
+			targetEl.style.maxHeight = isAriaPressed ? "none" : maxHeight + "px";
 		}
-
-		handleToggleClass(targetEl, alignClass, maxHeight);
-
-		return console.log(isAriaPressed);
 	}
 
 	return (
 		<button
-			className={`button${className ? " " + className : ""}`}
-			{...restProps}
-			onClick={handleClick}
 			aria-pressed={isAriaPressed}
+			className={`button${className ? " " + className : ""}`}
+			onClick={handleClick}
+			{...restProps}
 		>
 			{label}
+			{isAriaPressed ? <Check /> : <Close />}
 		</button>
 	);
 }
