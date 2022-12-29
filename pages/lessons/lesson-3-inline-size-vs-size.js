@@ -64,7 +64,7 @@ export default function LessonThree() {
 					explicity given (height, min-height, or even just padding).
 				</p>
 				<p>Select a Type below to see this behavior.</p>
-				<CodeBlock>{`.wp-block-group { container-type: ${checked}}`}</CodeBlock>
+				<CodeBlock>{`.wp-block-group { container-type: ... }`}</CodeBlock>
 				<ButtonsWrapper className="space-between">
 					<div>
 						<p>Container Type</p>
