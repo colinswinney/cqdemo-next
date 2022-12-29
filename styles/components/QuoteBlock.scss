@@ -1,30 +1,38 @@
 
 .wp-block-quote {
-	color: var(--c-primary);
 	background-image: url("../../public/quote-light.png");
 	background-position: 0.5em 0.5em;
 	background-repeat: no-repeat;
 	background-size: 3em;
 	// border-left: 5cqw solid currentcolor;
-	border-left: 10px solid currentcolor;
+	border-left: 10px solid var(--c-primary);
 	padding: 1em;
 
 	& p {
 		// font-size: clamp(1rem, calc(0.02rem + 4.18vw), 3rem);
 		// font-size: clamp(1rem, calc(0.02rem + 4.18cqw), 3rem);
-		margin: 0 0 1em;
+		margin: 0;
+		font-weight: 700;
 	}
 
 	& cite {
 		// font-size: clamp(1rem, calc(0.61rem + 1.95vw), 2rem);
 		// font-size: clamp(1rem, calc(0.61rem + 1.95cqw), 2rem);
-		font-weight: 900;
+		color: var(--c-primary);
+		display: inline-block;
+		font-size: 0.8em;
+		font-weight: 500;
+		margin-top: 1em;
 	}
 
-	@container wp-block-group (min-width: 22.5em) {
-		background-position: center 2.5em;
+	@container wp-block-group (width >= 22.5em) {
+		background-position: center 1rem;
 		border: none;
-		padding: 3rem;
+		padding: 6rem 3rem 3rem;
 		text-align: center;
+
+		.lesson-two-example & {
+			background-color: var(--c-gray-white);
+		}
 	}
 }
