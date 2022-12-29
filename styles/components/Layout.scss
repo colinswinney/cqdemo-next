@@ -31,7 +31,14 @@
 .page-header {
 	align-items: center;
 	display: flex;
+	justify-content: center;
 	margin: 0;
 	min-height: calc(100vh - 68px);
 	text-align: center;
+}
+
+.content-info {
+	align-items: flex-end;
+	display: flex;
+	min-height: 50vh;
 }

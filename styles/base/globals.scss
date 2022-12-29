@@ -35,11 +35,27 @@ h1 {
 	font-size: var(--fs-3);
 	margin: 0;
 
-	span {
+	& span:first-of-type {
 		color: var(--c-black);
 		display: block;
 		font-size: 0.33em;
 		font-weight: 500;
+	}
+
+	& .asterisk {
+		font-size: 0.25em;
+		vertical-align: top;
+	}
+
+	& .asterisk-explain {
+		display: block;
+		margin-top: 2em;
+		font-style: italic;
+		font-weight: 700;
+
+		& .asterisk {
+			font-size: 0.75em;
+		}
 	}
 
 	@include breakpoints.media-breakpoint-up(sm) {
@@ -95,6 +111,37 @@ pre[class*="language-"] {
 	margin: 1.5rem 0;
 }
 
+code {
+	background-color: var(--c-gray-white);
+	padding: 0.125em 0.25em;
+}
+
 img {
 	height: auto;
+}
+
+input[type="radio"] {
+	margin-right: 0.5em;
+}
+
+.slider-wrapper {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 8px;
+	margin-right: 2em;
+
+	label {
+		position: relative;
+
+		span {
+			padding-left: 0.25em;
+			position: absolute;
+			right: -2em;
+			width: 2em;
+		}
+	}
+
+	input {
+		width: calc(100% + 2em);
+	}
 }

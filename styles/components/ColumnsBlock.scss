@@ -3,14 +3,11 @@
 .wp-block-columns {
 	display: grid;
 	gap: var(--spacer);
+	overflow: hidden;
 
 	@include breakpoints.media-breakpoint-up(sm) {
 		&.has-two-columns {
 			grid-template-columns: repeat(2, 1fr);
-
-			&.has-uneven-columns {
-				grid-template-columns: 1fr 2fr;
-			}
 		}
 
 		&.has-three-columns {
@@ -20,5 +17,10 @@
 		&.has-four-columns {
 			grid-template-columns: repeat(4, 1fr);
 		}
+	}
+
+	&.lesson-two-example {
+		grid-template-columns: auto auto;
+		gap: 0;
 	}
 }
