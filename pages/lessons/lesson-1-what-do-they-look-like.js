@@ -1,15 +1,24 @@
 import Layout from "../../components/Layout";
 import CodeBlock from "../../components/CodeBlock";
 import SpacerBlock from "../../components/SpacerBlock";
+import ColumnsBlock from "../../components/ColumnsBlock";
+import ColumnBlock from "../../components/ColumnBlock";
+import GroupBlock from "../../components/GroupBlock";
+import QuoteBlock from "../../components/QuoteBlock";
+import ButtonsWrapper from "../../components/ButtonsWrapper";
+import Button from "../../components/Button";
+
+const LESSON_TEXT = "Lesson One";
+const LESSON_SLUG = "lesson-one";
 
 export default function LessonOne() {
 
 	return (
 		<>
 			<Layout
-				metaDescription="Lesson one, what do container queries look like?"
-				metaTitle="Lesson One"
-				title="<span>Lesson One </span>What Do They Look Like? 🧐"
+				metaDescription={`${LESSON_TEXT}, what do container queries look like?`}
+				metaTitle={LESSON_TEXT}
+				title={`<span>${LESSON_TEXT} </span>What Do They Look Like? 🧐`}
 			>
 				<h2>The Basics</h2>
 				<p>
@@ -24,7 +33,7 @@ export default function LessonOne() {
 					context.
 				</p>
 				<CodeBlock>
-					{`@container sidebar (min-width: 20em) {
+					{`@container sidebar (width > 22.5em) {
 
 	.wp-block-quote {
 		...
@@ -36,11 +45,11 @@ export default function LessonOne() {
 				<SpacerBlock />
 				<h3>Unnamed</h3>
 				<p>
-					Will look for the closet parent element that has a container context. If
-					no parent has a container-type set, no changes will be applied.
+					Will look for the closet parent element that has a container context.
+					If no parent has a container-type set, no changes will be applied.
 				</p>
 				<CodeBlock>
-					{`@container (min-width: 20em) {
+					{`@container (width > 22.5em) {
 
 	.wp-block-quote {
 		...
@@ -82,43 +91,19 @@ export default function LessonOne() {
 
 				<SpacerBlock />
 				<h3>All Together</h3>
-				<p>
-					In this example, imagine registering styles for setting a
-					container context on the Group block. Any blocks placed inside could take
-					on a different look at various dimensions.
-				</p>
 				<CodeBlock>
-					{`.wp-block-group.is-style-inline-size {
-	container-name: group--inline-size;
+					{`.wp-block-group {
+	container-name: wp-block-group;
 	container-type: inline-size;
 }
 
-@container group--inline-size (min-width: 400px) {
+@container wp-block-group (min-width: 400px) {
 
-	.wp-block-quote,
-	.wp-block-image figcaption {
-		font-size: 1.5em;
-	}
-}
-
-`}
-				</CodeBlock>
-				<CodeBlock>
-					{`.wp-block-group.is-style-size {
-	container-name: group--size;
-	container-type: size;
-	height: 50vh;
-}
-
-@container group--size (max-height: 300px) {
-
-	.wp-block-image figcaption {
-		bottom: 0;
-		position: absolute;
+	.wp-block-quote {
+		text-align: center;
 		...
 	}
 }
-
 `}
 				</CodeBlock>
 			</Layout>

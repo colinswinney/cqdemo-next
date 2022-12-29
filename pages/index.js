@@ -67,7 +67,10 @@ export default function Home() {
 					<strong>height</strong> of it&apos;s parent (a Group block).
 				</p>
 
-				<p>Use the Toggles or resize your browser in either direction to see the queries take effect.</p>
+				<p>
+					Use the Toggles or resize your browser in either direction to see the
+					queries take effect.
+				</p>
 
 				<SpacerBlock height={24} />
 
@@ -75,12 +78,13 @@ export default function Home() {
 					<Button
 						label="Toggle Alignfull"
 						target="alignfull-target"
-						alignfull
+						clickHandler="alignfull"
 					/>
 					<Button
 						label="Toggle Max Height"
 						target="image-group-block"
 						maxHeight={300}
+						clickHandler="maxHeight"
 					/>
 				</ButtonsWrapper>
 				<SpacerBlock height={48} />
