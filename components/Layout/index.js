@@ -25,15 +25,32 @@ export default function Layout({ children, metaDescription, metaTitle, title }) 
 				</div>
 			</main>
 			<footer className="content-info">
-				<nav>
-					<ul>
-						<li>
-							<Link href="/lessons/lesson-one-what-do-they-look-like">
-								Lesson One - What Do They Look Like?
-							</Link>
-						</li>
-					</ul>
-				</nav>
+				<div className="content-info__container">
+					<nav aria-label="Lessons">
+						<ul>
+							<li>
+								<Link href="/">
+									Home
+								</Link>
+							</li>
+							<li>
+								<Link href="/lessons/lesson-1-what-do-they-look-like">
+									Lesson One - What Do They Look Like?
+								</Link>
+							</li>
+							<li>
+								<Link href="/lessons/lesson-2-inline-size">
+									Lesson Two - Inline Size
+								</Link>
+							</li>
+							<li>
+								<Link href="/lessons/lesson-3-inline-size-vs-size">
+									Lesson Three - Inline Size vs Size
+								</Link>
+							</li>
+						</ul>
+					</nav>
+				</div>
 			</footer>
 		</>
 	);
