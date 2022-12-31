@@ -4,7 +4,7 @@ import Close from "../SVG/Close";
 import { buttonStyles } from "../../utilities/buttonStyles";
 
 export default function ButtonAlignfull(props) {
-	const { className, clickHandler, label, maxHeight, target, ...restProps } = props;
+	const { className, clickHandler, label, height, target, ...restProps } = props;
 
 	const [isAriaPressed, setIsAriaPressed] = useState(false);
 
@@ -18,8 +18,10 @@ export default function ButtonAlignfull(props) {
 			targetEl.classList.toggle("alignfull");
 		}
 
-		if (clickHandler === 'maxHeight' && targetEl && maxHeight) {
-			targetEl.style.maxHeight = isAriaPressed ? "none" : maxHeight + "px";
+		if (clickHandler === "writing-mode" && targetEl) {
+			targetEl.classList.toggle("vertical-rl");
+			const code = clickedBtn.querySelector("code");
+			code.classList.toggle("invert");
 		}
 	}
 
@@ -30,7 +32,12 @@ export default function ButtonAlignfull(props) {
 			onClick={handleClick}
 			{...restProps}
 		>
-			{label}
+			<span
+				dangerouslySetInnerHTML={{
+					__html: label,
+				}}
+			></span>
+			{" "}
 			{isAriaPressed ? <Check /> : <Close />}
 		</button>
 	);

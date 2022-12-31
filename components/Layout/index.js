@@ -17,36 +17,41 @@ export default function Layout({ children, metaDescription, metaTitle, title }) 
 				</Link>
 			</header>
 			<main className="main">
-				<div className="main-container">
-					<div className="page-header">
+				<div className="content-container">
+					<div className="page-header alignwide">
 						<h1 dangerouslySetInnerHTML={{ __html: title }} />
 					</div>
 					{children}
 				</div>
 			</main>
 			<footer className="content-info">
-				<div className="content-info__container">
+				<div className="content-info__container content-container">
+					<h3>Lessons</h3>
 					<nav aria-label="Lessons">
 						<ul>
 							<li>
-								<Link href="/">
-									Home
-								</Link>
+								<Link href="/">Home</Link>
 							</li>
 							<li>
-								<Link href="/lessons/lesson-1-what-do-they-look-like">
+								<Link href="/lessons/1-what-do-they-look-like">
 									Lesson One - What Do They Look Like?
 								</Link>
 							</li>
 							<li>
-								<Link href="/lessons/lesson-2-inline-size">
+								<Link href="/lessons/2-inline-size">
 									Lesson Two - Inline Size
 								</Link>
 							</li>
 							<li>
-								<Link href="/lessons/lesson-3-inline-size-vs-size">
+								<Link href="/lessons/3-inline-size-vs-size">
 									Lesson Three - Inline Size vs Size
 								</Link>
+							</li>
+							<li>
+								<Link href="/lessons/4-size">Lesson Four - Size</Link>
+							</li>
+							<li>
+								<Link href="/lessons/5-descriptors">Lesson Five - Descriptors</Link>
 							</li>
 						</ul>
 					</nav>
