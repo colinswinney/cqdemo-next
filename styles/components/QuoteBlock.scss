@@ -25,14 +25,14 @@
 		margin-top: 1em;
 	}
 
-	@container wp-block-group (width >= 22.5em) {
+	@container wp-block-group (width >= 18.75em) {
 		background-position: center 1rem;
 		border: none;
 		padding: 6rem 3rem 3rem;
 		text-align: center;
 
 		.lesson-two-example & {
-			background-color: var(--c-gray-white);
+			background-color: var(--c-gray);
 		}
 	}
 }

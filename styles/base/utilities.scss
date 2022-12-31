@@ -1,0 +1,42 @@
+.slider-wrapper {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 8px;
+	margin-right: 2em;
+
+	label {
+		position: relative;
+
+		span {
+			padding-left: 0.25em;
+			position: absolute;
+			right: -2em;
+			width: 2em;
+		}
+	}
+
+	input {
+		width: calc(100% + 2em);
+	}
+}
+
+.resizable {
+	max-width: var(--container-max);
+	overflow: scroll;
+	resize: both;
+}
+
+.resizable-x {
+	max-width: var(--container-max);
+	overflow-x: scroll;
+	resize: horizontal;
+}
+
+.resizable-y {
+	overflow-y: scroll;
+	resize: vertical;
+}
+
+.vertical-rl {
+	writing-mode: vertical-rl;
+}
