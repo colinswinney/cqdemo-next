@@ -20,19 +20,20 @@ export default function Home() {
 				metaTitle="Home"
 				title="Container Queries 🤩"
 			>
-				<h2>A Word of Warning</h2>
+				<h2>Words of Warning</h2>
 				<p>
-					This demo has only been designed for desktop use and tested with the
+					This site has only been designed for desktop use and tested with the
 					latest verison of Chrome (<strong>108</strong> at the time of this
 					writing). Please see{" "}
 					<a href="https://caniuse.com/css-container-queries">caniuse.com</a>{" "}
 					for latest browser compatibilty.
 				</p>
 				<p>
-					Though this demo is a Next.js app, I have used markup and class names
-					from WordPress core blocks to hopefully give a better sense of how
-					container queries can be applied in our day to day work.
+					Though this demo is built with Next.js, I have used markup and class
+					names from WordPress core blocks to hopefully give a better sense of
+					how container queries can be used in a common environment.
 				</p>
+				<p>Finally, I will often be using the words <strong>width</strong> and <strong>height</strong> when it would be more appropriate to use <strong>inline axis</strong> and <strong>block axis</strong>.  Those axes can flip directions depending on the <code>writing-mode</code> property, so do keep that in mind.</p>
 				<h2>What Will We Be Demoing?</h2>
 				<p>
 					This demo will focus on two examples, Quote and Image blocks. Whenever
@@ -57,34 +58,34 @@ export default function Home() {
 				<p>
 					The Quote Block will be focused on the <strong>inline-size</strong>{" "}
 					container-type. We will only be applying styles based on the{" "}
-					<strong>width</strong> of it&apos;s parent (a Group block).
+					<strong>width</strong> of its parent (a Group block).
 				</p>
 
 				<h3>Image Block</h3>
 				<p>
 					The Image Block will be focused on the <strong>size</strong>{" "}
 					container-type. We will only be applying styles based on the{" "}
-					<strong>height</strong> of it&apos;s parent (a Group block).
+					<strong>height</strong> of its parent (a Group block), though you
+					could also query its width.
 				</p>
 
 				<p>
-					Use the Toggles or resize your browser in either direction to see the
+					Below you can toggle the <code>alignfull</code> class on the Columns
+					block or resize the <code>height</code> of the Image&apos;s parent block
+					in the lower right corner.
+				</p>
+				<p>
+					You can also resize your browser along either axis to see the
 					queries take effect.
 				</p>
 
-				<SpacerBlock height={24} />
+				<SpacerBlock height={24}/>
 
-				<ButtonsWrapper className="space-between">
+				<ButtonsWrapper>
 					<Button
 						label="Toggle Alignfull"
 						target="alignfull-target"
 						clickHandler="alignfull"
-					/>
-					<Button
-						label="Toggle Max Height"
-						target="image-group-block"
-						maxHeight={300}
-						clickHandler="maxHeight"
 					/>
 				</ButtonsWrapper>
 				<SpacerBlock height={48} />
@@ -95,7 +96,7 @@ export default function Home() {
 						</GroupBlock>
 					</ColumnBlock>
 					<ColumnBlock>
-						<GroupBlock className="is-size" id="image-group-block">
+						<GroupBlock className="is-size resizable-y">
 							<ImageBlock />
 						</GroupBlock>
 					</ColumnBlock>

@@ -25,7 +25,6 @@ export default function LessonOne() {
 					A <strong>@container</strong> query looks just like a{" "}
 					<strong>@media</strong> query. It can either be named or unnamed.
 				</p>
-				<SpacerBlock />
 
 				<h3>Named</h3>
 				<p>
@@ -33,7 +32,7 @@ export default function LessonOne() {
 					context.
 				</p>
 				<CodeBlock>
-					{`@container sidebar (width > 22.5em) {
+					{`@container sidebar (width > 18.75em) {
 
 	.wp-block-quote {
 		...
@@ -42,14 +41,13 @@ export default function LessonOne() {
 }`}
 				</CodeBlock>
 
-				<SpacerBlock />
 				<h3>Unnamed</h3>
 				<p>
 					Will look for the closet parent element that has a container context.
 					If no parent has a container-type set, no changes will be applied.
 				</p>
 				<CodeBlock>
-					{`@container (width > 22.5em) {
+					{`@container (width > 18.75em) {
 
 	.wp-block-quote {
 		...

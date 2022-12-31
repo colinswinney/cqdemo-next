@@ -29,7 +29,6 @@ export default function LessonThree() {
 	useEffect(() => {
 		const targetEl = document.getElementById("group-to-toggle");
 		targetEl.style.containerType = checked;
-		console.log(targetEl)
 	}, [checked])
 
 	return (
@@ -42,67 +41,88 @@ export default function LessonThree() {
 				<h2>The Basics</h2>
 				<p>
 					With a container-type of <strong>inline-size</strong>, you are only
-					able to query the inline axis (usually the width) of the container.
+					able to query the inline axis of the container.
 				</p>
 				<p>
 					A container-type of <strong>size</strong>, allows for querying along
-					both the inline axis and block axis of the container. There is no
-					container type for stricty the block axis.
+					both the inline axis and the block axis of the container. There is no
+					container-type for querying stricty the block axis.
 				</p>
 
 				<h3>What Happens When You Switch Types?</h3>
 				<p>
 					Just like every block level element, unless otherwise declared, a
-					container has <code>height: auto</code> and will be as tall its
-					contents. This works as expected on an <strong>inline-size</strong>{" "}
-					container-type.
+					container has a default of <code>height: auto</code>. This works as
+					expected on an <strong>inline-size</strong> container-type where the
+					height will calculate based on the elements contents.
 				</p>
 				<p>
 					When using a container-type of <strong>size</strong> though, that{" "}
 					<code>height: auto</code> calculates to <strong>0</strong>. The inner
 					contents are essentially ignored and some kind of height must be
-					explicity given (height, min-height, or even just padding).
+					explicity given (<code>height</code>, <code>min-height</code>, or even
+					just <code>padding</code>).
 				</p>
-				<p>Select a Type below to see this behavior.</p>
+				<p>
+					Select a <strong>container-type</strong> below to see how switching types can affect layout.
+				</p>
 				<CodeBlock>{`.wp-block-group { container-type: ... }`}</CodeBlock>
 				<ButtonsWrapper className="space-between">
 					<div>
-						<p>Container Type</p>
+						<p>
+							<strong>container-type</strong>
+						</p>
 						<input
 							type="radio"
 							id="inline-size"
 							name="container-type"
-							value="Inline Size"
+							value="inline-size"
 							checked={checked === "inline-size"}
 							onChange={handleRadioInlineSize}
 						/>
-						<label htmlFor="inline-size">Inline Size</label>
+						<label htmlFor="inline-size">inline-size</label>
 						<br />
 						<input
 							type="radio"
 							id="size"
 							name="container-type"
-							value="Size"
+							value="size"
 							checked={checked === "size"}
 							onChange={handleRadioSize}
 						/>
-						<label htmlFor="size">Size</label>
+						<label htmlFor="size">size</label>
 					</div>
 				</ButtonsWrapper>
-
-				<SpacerBlock height={48} />
-				<GroupBlock className="is-inline-size" id="group-to-toggle">
+				<GroupBlock
+					style={{ container: "wp-block-group / inline-size" }}
+					id="group-to-toggle"
+				>
 					<QuoteBlock />
 				</GroupBlock>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lectus
-					justo, varius lacinia mauris pellentesque, malesuada tempor felis.
-					Nulla vulputate pretium venenatis. Phasellus et ante magna. Sed
-					faucibus consequat congue. Morbi molestie ut purus quis convallis.
-					Morbi vitae molestie est. Phasellus at finibus tortor. Fusce at
-					consequat ipsum, at maximus quam. Nulla pellentesque nibh ut justo
-					accumsan blandit.
-				</p>
+				<section
+					aria-label="An example banner ad"
+					className="alignfull content-container"
+					style={{
+						backgroundColor: "rgb(200 0 0 / 5%)",
+						display: 'grid',
+						padding: "3em 0",
+						placeItems: 'center'
+					}}
+				>
+					<h2
+						style={{
+							color: 'var(--c-primary)',
+							marginTop: 0,
+							maxWidth: '15ch',
+							textAlign: "center",
+						}}
+					>
+						The Worlds Most Legible Website
+					</h2>
+					<ButtonsWrapper>
+						<button disabled className="button">Learn More</button>
+					</ButtonsWrapper>
+				</section>
 			</Layout>
 		</>
 	);

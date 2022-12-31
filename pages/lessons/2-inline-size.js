@@ -40,8 +40,8 @@ export default function LessonTwo() {
 					axis of the container.
 				</p>
 				<p>
-					Usually this is the width of the container but it can be the height if
-					the writing-mode is vertical.
+					Usually this is the width of the container but again, it can be the
+					height if the <code>writing-mode</code> is vertical.
 				</p>
 
 				<h2>Example</h2>
@@ -50,6 +50,19 @@ export default function LessonTwo() {
 					Let&apos;s look at a typical Columns setup with two Column blocks each
 					containing a Quote.
 				</p>
+
+				<ColumnsBlock className={`has-two-columns ${LESSON_SLUG}-example`}>
+					<ColumnBlock id="column-one">
+						<GroupBlock className="is-inline-size">
+							<QuoteBlock paragraph="Should I use lorem ipsum?" />
+						</GroupBlock>
+					</ColumnBlock>
+					<ColumnBlock>
+						<GroupBlock className="is-inline-size">
+							<QuoteBlock paragraph="Let's just keep it short." />
+						</GroupBlock>
+					</ColumnBlock>
+				</ColumnsBlock>
 
 				<h3>Markup</h3>
 				<p>
@@ -90,10 +103,10 @@ export default function LessonTwo() {
 }
 
 /* query against it's dimensions */
-@container wp-block-group (width >= 22.5em) {
+@container wp-block-group (width >= 18.75em) {
 
 	.wp-block-quote {
-		background-color: var(--c-gray-white);
+		background-color: var(--c-gray);
 		...
 	}
 }
@@ -133,7 +146,7 @@ export default function LessonTwo() {
 				>
 					<ColumnBlock id="column-one">
 						<GroupBlock className="is-inline-size">
-							<QuoteBlock paragraph="Should I be using lorem ipsum?" />
+							<QuoteBlock paragraph="Should I use lorem ipsum?" />
 						</GroupBlock>
 					</ColumnBlock>
 					<ColumnBlock>
