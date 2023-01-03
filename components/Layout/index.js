@@ -28,32 +28,30 @@ export default function Layout({ children, metaDescription, metaTitle, title }) 
 				<div className="content-info__container content-container">
 					<h3>Lessons</h3>
 					<nav aria-label="Lessons">
-						<ul>
-							<li>
-								<Link href="/">Home</Link>
-							</li>
+						<ol>
 							<li>
 								<Link href="/lessons/1-what-do-they-look-like">
-									Lesson One - What Do They Look Like?
+									What Do They Look Like?
 								</Link>
 							</li>
 							<li>
-								<Link href="/lessons/2-inline-size">
-									Lesson Two - Inline Size
-								</Link>
+								<Link href="/lessons/2-inline-size">Inline Size</Link>
 							</li>
 							<li>
 								<Link href="/lessons/3-inline-size-vs-size">
-									Lesson Three - Inline Size vs Size
+									Inline Size vs Size
 								</Link>
 							</li>
 							<li>
-								<Link href="/lessons/4-size">Lesson Four - Size</Link>
+								<Link href="/lessons/4-size">Size</Link>
 							</li>
 							<li>
-								<Link href="/lessons/5-descriptors">Lesson Five - Descriptors</Link>
+								<Link href="/lessons/5-descriptors">Descriptors</Link>
 							</li>
-						</ul>
+							<li>
+								<Link href="/lessons/6-new-length-units">New Length Units</Link>
+							</li>
+						</ol>
 					</nav>
 				</div>
 			</footer>
