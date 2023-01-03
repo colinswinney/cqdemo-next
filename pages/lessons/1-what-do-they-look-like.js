@@ -1,12 +1,6 @@
 import Layout from "../../components/Layout";
 import CodeBlock from "../../components/CodeBlock";
 import SpacerBlock from "../../components/SpacerBlock";
-import ColumnsBlock from "../../components/ColumnsBlock";
-import ColumnBlock from "../../components/ColumnBlock";
-import GroupBlock from "../../components/GroupBlock";
-import QuoteBlock from "../../components/QuoteBlock";
-import ButtonsWrapper from "../../components/ButtonsWrapper";
-import Button from "../../components/Button";
 
 const LESSON_TEXT = "Lesson One";
 const LESSON_SLUG = "lesson-one";

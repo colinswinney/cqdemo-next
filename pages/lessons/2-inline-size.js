@@ -103,7 +103,7 @@ export default function LessonTwo() {
 }
 
 /* query against it's dimensions */
-@container wp-block-group (width >= 18.75em) {
+@container wp-block-group (width > 18.75em) {
 
 	.wp-block-quote {
 		background-color: var(--c-gray);

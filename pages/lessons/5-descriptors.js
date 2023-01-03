@@ -1,32 +1,22 @@
-import { useState, useLayoutEffect, useRef } from "react";
-import { useSize } from "../../utilities/useSize";
-
 import Layout from "../../components/Layout";
 import ButtonsWrapper from "../../components/ButtonsWrapper";
 import Button from "../../components/Button";
 import CodeBlock from "../../components/CodeBlock";
-import ColumnsBlock from "../../components/ColumnsBlock";
-import ColumnBlock from "../../components/ColumnBlock";
 import GroupBlock from "../../components/GroupBlock";
 import ImageBlock from "../../components/ImageBlock";
-import QuoteBlock from "../../components/QuoteBlock";
-import SpacerBlock from "../../components/SpacerBlock";
 
 
 const LESSON_TEXT = "Lesson Five";
 const LESSON_SLUG = "lesson-five";
 
-export default function LessonFour() {
-
-	const [target, setTarget] = useState();
-	const sizeAspect = useSize(target);
+export default function LessonFive() {
 
 	return (
 		<>
 			<Layout
 				metaDescription="Container at-rule descriptors"
 				metaTitle={LESSON_TEXT}
-				title={`<span class="eyebrow">${LESSON_TEXT} </span>Container<br/>At-Rule Descriptors 🗣`}
+				title={`<span class="eyebrow">${LESSON_TEXT} </span>@container Descriptors 🗣`}
 			>
 				<h2>The Basics</h2>
 				<p>
@@ -56,8 +46,8 @@ export default function LessonFour() {
 				<p>
 					Additionally, you can use <code>and</code>, <code>or</code>, and{" "}
 					<code>not</code> to define the query. The first two can be combined as
-					you see fit, the <code>not</code> keyword can only be used once by
-					itself.
+					you see fit, while the <code>not</code> keyword can only be used once
+					by itself.
 				</p>
 				<CodeBlock>
 					{`@container (width > 400px) or (orientation: portrait) {
@@ -69,12 +59,22 @@ export default function LessonFour() {
 }`}
 				</CodeBlock>
 
-				<section className="content-container" aria-label="Aspect Ratio">
+				<section
+					className="content-container content-container--level-2"
+					aria-label="Aspect Ratio"
+				>
 					<h2>Aspect Ratio</h2>
-					<p>
-						You can use <code>min-aspect-ratio</code>,{" "}
-						<code>max-aspect-ratio</code>, or simply <code>aspect-ratio</code>.
-					</p>
+					<ul>
+						<li>
+							<code>aspect-ratio</code>
+						</li>
+						<li>
+							<code>min-aspect-ratio</code>
+						</li>
+						<li>
+							<code>max-aspect-ratio</code>
+						</li>
+					</ul>
 					<CodeBlock>
 						{`@container (min-aspect-ratio: 16 / 9) {
 	...
@@ -103,30 +103,26 @@ export default function LessonFour() {
 					}
 				}
 				`}</style>
-					<div ref={setTarget}>
-						<GroupBlock className="resizable" id="aspect-ratio">
-							<ImageBlock
-								caption={`<span>Over 16 / 9</span><span>under 16 / 9</span>`}
-							/>
-						</GroupBlock>
-					</div>
-					<pre>
-						{JSON.stringify(
-							{
-								width: Math.round(sizeAspect?.width),
-								height: Math.round(sizeAspect?.height),
-							},
-							null,
-							2
-						)}
-					</pre>
+					<GroupBlock className="resizable" id="aspect-ratio">
+						<ImageBlock
+							caption={`<span>Over 16 / 9</span><span>under 16 / 9</span>`}
+						/>
+					</GroupBlock>
 				</section>
 
-				<section className="content-container" aria-label="Orientation">
+				<section
+					className="content-container content-container--level-2"
+					aria-label="Orientation"
+				>
 					<h2>Orientation</h2>
-					<p>
-						You can use <code>portrait</code> or <code>landscape</code>.
-					</p>
+					<ul>
+						<li>
+							<code>portrait</code>
+						</li>
+						<li>
+							<code>landscape</code>
+						</li>
+					</ul>
 					<CodeBlock>
 						{`@container (orientation: landscape) {
 	...
@@ -162,12 +158,22 @@ export default function LessonFour() {
 					</GroupBlock>
 				</section>
 
-				<section className="content-container" aria-label="Block Size">
+				<section
+					className="content-container content-container--level-2"
+					aria-label="Block Size"
+				>
 					<h2>Block Size</h2>
-					<p>
-						You can use <code>min-block-size</code>, <code>max-block-size</code>{" "}
-						or simply <code>block-size</code>.
-					</p>
+					<ul>
+						<li>
+							<code>block-size</code>
+						</li>
+						<li>
+							<code>min-block-size</code>
+						</li>
+						<li>
+							<code>max-block-size</code>
+						</li>
+					</ul>
 					<p>
 						Toggle the <code>writing-mode</code> and resize the block.
 					</p>
@@ -213,12 +219,22 @@ export default function LessonFour() {
 					</GroupBlock>
 				</section>
 
-				<section className="content-container" aria-label="Inline Size">
+				<section
+					className="content-container content-container--level-2"
+					aria-label="Inline Size"
+				>
 					<h2>Inline Size</h2>
-					<p>
-						You can use <code>min-inline-size</code>,{" "}
-						<code>max-inline-size</code> or simply <code>inline-size</code>.
-					</p>
+					<ul>
+						<li>
+							<code>inline-size</code>
+						</li>
+						<li>
+							<code>min-inline-size</code>
+						</li>
+						<li>
+							<code>max-inline-size</code>
+						</li>
+					</ul>
 					<p>
 						Toggle the <code>writing-mode</code> and resize the block.
 					</p>
@@ -263,6 +279,28 @@ export default function LessonFour() {
 						/>
 					</GroupBlock>
 				</section>
+
+				<h2>Height & Width</h2>
+				<ul>
+					<li>
+						<code>height</code>
+					</li>
+					<li>
+						<code>min-height</code>
+					</li>
+					<li>
+						<code>max-height</code>
+					</li>
+					<li>
+						<code>width</code>
+					</li>
+					<li>
+						<code>min-width</code>
+					</li>
+					<li>
+						<code>max-width</code>
+					</li>
+				</ul>
 			</Layout>
 		</>
 	);

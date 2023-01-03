@@ -52,6 +52,8 @@ export default function Home() {
 	<figure class="wp-block-image">
 		...
 	</figure>
+
+	<!-- ignore <pre> in DevTools -->
 </div>`}
 				</CodeBlock>
 				<h3>Quote Block</h3>
@@ -64,9 +66,8 @@ export default function Home() {
 				<h3>Image Block</h3>
 				<p>
 					The Image Block will be focused on the <strong>size</strong>{" "}
-					container-type. We will only be applying styles based on the{" "}
-					<strong>height</strong> of its parent (a Group block), though you
-					could also query its width.
+					container-type. We will mostly be applying styles based on the{" "}
+					<strong>height</strong> of its parent (a Group block).
 				</p>
 
 				<p>
@@ -96,7 +97,7 @@ export default function Home() {
 						</GroupBlock>
 					</ColumnBlock>
 					<ColumnBlock>
-						<GroupBlock className="is-size resizable-y">
+						<GroupBlock className="is-size resizable">
 							<ImageBlock />
 						</GroupBlock>
 					</ColumnBlock>

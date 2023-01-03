@@ -2,14 +2,9 @@ import { useState, useEffect } from "react";
 
 import Layout from "../../components/Layout";
 import ButtonsWrapper from "../../components/ButtonsWrapper";
-import Button from "../../components/Button";
 import CodeBlock from "../../components/CodeBlock";
-import ColumnsBlock from "../../components/ColumnsBlock";
-import ColumnBlock from "../../components/ColumnBlock";
 import GroupBlock from "../../components/GroupBlock";
-import ImageBlock from "../../components/ImageBlock";
 import QuoteBlock from "../../components/QuoteBlock";
-import SpacerBlock from "../../components/SpacerBlock";
 
 const LESSON_TEXT = 'Lesson Three';
 const LESSON_SLUG = 'lesson-three';

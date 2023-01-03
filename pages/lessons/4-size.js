@@ -55,7 +55,7 @@ export default function LessonFour() {
 				</p>
 
 				<CodeBlock lang="html">
-					{`<div class="wp-block-group is-size resizable-y">
+					{`<div class="wp-block-group is-size resizable">
 	<div class="wp-block-image">
 		...
 	</div>
@@ -85,7 +85,7 @@ export default function LessonFour() {
 `}
 				</CodeBlock>
 
-				<GroupBlock className="is-size resizable-y">
+				<GroupBlock className="is-size resizable">
 					<ImageBlock />
 				</GroupBlock>
 			</Layout>
