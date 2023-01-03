@@ -1,7 +1,7 @@
 
 .wp-block-quote {
 	background-image: url("../../public/quote-light.png");
-	background-position: 0.5em 0.5em;
+	background-position: 0.5em 0.25em;
 	background-repeat: no-repeat;
 	background-size: 3em;
 	// border-left: 5cqw solid currentcolor;
@@ -11,6 +11,7 @@
 	& p {
 		// font-size: clamp(1rem, calc(0.02rem + 4.18vw), 3rem);
 		// font-size: clamp(1rem, calc(0.02rem + 4.18cqw), 3rem);
+		// font-size: max(1em, 4cqi);
 		margin: 0;
 		font-weight: 700;
 	}
@@ -25,7 +26,7 @@
 		margin-top: 1em;
 	}
 
-	@container wp-block-group (width >= 18.75em) {
+	@container wp-block-group (width > 18.75em) {
 		background-position: center 1rem;
 		border: none;
 		padding: 6rem 3rem 3rem;

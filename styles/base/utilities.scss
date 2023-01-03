@@ -26,17 +26,6 @@
 	resize: both;
 }
 
-.resizable-x {
-	max-width: var(--container-max);
-	overflow-x: scroll;
-	resize: horizontal;
-}
-
-.resizable-y {
-	overflow-y: scroll;
-	resize: vertical;
-}
-
 .vertical-rl {
 	writing-mode: vertical-rl;
 }

@@ -8,6 +8,10 @@
 	@include breakpoints.media-breakpoint-up(sm) {
 		&.has-two-columns {
 			grid-template-columns: repeat(2, 1fr);
+
+			.resizable {
+				max-width: calc(var(--container-max) / 2 - calc(var(--spacer) / 2));
+			}
 		}
 
 		&.has-three-columns {

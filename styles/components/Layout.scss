@@ -4,6 +4,12 @@
 
 .logo {
 	font-weight: 900;
+	text-decoration-color: transparent;
+
+	&:hover,
+	&:focus-visible {
+		text-decoration-color: var(--c-primary);
+	}
 }
 
 .main {
@@ -13,6 +19,10 @@
 .content-container {
 	display: grid;
 	grid-template-columns: 1fr var(--spacer) minmax(auto, var(--container-max)) var(--spacer) 1fr;
+
+	&.content-container--level-2 {
+		margin-inline: calc(var(--spacer) * -1);
+	}
 }
 
 .content-container > * {

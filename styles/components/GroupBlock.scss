@@ -1,6 +1,30 @@
 .wp-block-group {
 	margin: 0;
 
+	.dimensions {
+		display: none;
+	}
+
+	&.vertical-rl .dimensions {
+		writing-mode: initial;
+	}
+
+	&.resizable {
+		position: relative;
+
+		.dimensions {
+			background-color: rgb(0 0 0 / 75%);
+			bottom: 0;
+			color: var(--c-white);
+			display: inline;
+			line-height: 1;
+			padding: 0.125em;
+			position: absolute;
+			right: 0;
+			z-index: 3;
+		}
+	}
+
 	&.is-inline-size {
 		container: wp-block-group / inline-size;
 	}
