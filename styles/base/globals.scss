@@ -47,22 +47,6 @@ h1 {
 		font-weight: 500;
 	}
 
-	& .asterisk {
-		font-size: 0.25em;
-		vertical-align: top;
-	}
-
-	& .asterisk-explain {
-		display: block;
-		margin-top: 2em;
-		font-style: italic;
-		font-weight: 700;
-
-		& .asterisk {
-			font-size: 0.75em;
-		}
-	}
-
 	@include breakpoints.media-breakpoint-up(sm) {
 		font-size: var(--fs-4);
 	}
@@ -74,6 +58,7 @@ h1 {
 
 h2 {
 	font-size: var(--fs-3);
+    position: relative;
 }
 
 h3 {
@@ -97,18 +82,15 @@ strong {
 }
 
 a {
-  	--bg-h: 2px;
-	background: linear-gradient(0deg, currentColor, currentColor) no-repeat right bottom / 0 var(--bg-h);
-  	transition-property: background-size, color;
-	transition-duration: 0.35s;
 	color: var(--c-primary);
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	transition-duration: 0.1s;
 
 	&:hover,
 	&:focus-visible {
-		background-size: 100% var(--bg-h);
-		background-position-x: left;
 		color: var(--c-blue);
+		text-decoration-color: currentColor;
 	}
 }
 
@@ -129,7 +111,7 @@ code {
 	}
 
 	&.invert {
-		background-color: rgb(0 0 0 / 75%);
+		background-color: #0c0d0b;
 	}
 }
 
@@ -137,6 +119,8 @@ img {
 	height: auto;
 }
 
+input[type="checkbox"],
 input[type="radio"] {
-	margin-right: 0.5em;
+	margin: 0 0.5em 0 0;
+	transform: scale(1.25);
 }

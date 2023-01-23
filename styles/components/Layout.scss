@@ -8,7 +8,7 @@
 
 	&:hover,
 	&:focus-visible {
-		text-decoration-color: var(--c-primary);
+		text-decoration-color: currentColor;
 	}
 }
 
@@ -23,11 +23,20 @@
 	&.content-container--level-2 {
 		margin-inline: calc(var(--spacer) * -1);
 	}
+
+	a {
+		text-decoration-color: currentColor;
+
+		&:hover,
+		&:focus-visible {
+			text-decoration-color: transparent;
+		}
+	}
 }
 
 .content-container > * {
 	grid-column: 3;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2rem;
 }
 
 .content-container .alignfull {
@@ -70,6 +79,11 @@
 
 		&:hover,
 		&:focus-visible {
+			text-decoration-color: currentColor;
+		}
+
+		&.active {
+			color: var(--c-blue);
 			text-decoration-color: currentColor;
 		}
 	}

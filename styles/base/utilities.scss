@@ -29,3 +29,19 @@
 .vertical-rl {
 	writing-mode: vertical-rl;
 }
+
+.asterisk {
+	font-size: 0.25em;
+	vertical-align: top;
+}
+
+.asterisk-explain {
+	display: block;
+	margin-top: 2em;
+	font-style: italic;
+	font-weight: 700;
+
+	& .asterisk {
+		font-size: 0.75em;
+	}
+}

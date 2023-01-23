@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import Button from '../components/Button';
+import AlignfullToggle from '../components/AlignfullToggle';
 import ButtonsWrapper from '../components/ButtonsWrapper';
 import CodeBlock from '../components/CodeBlock';
 import ColumnsBlock from '../components/ColumnsBlock';
@@ -33,7 +33,13 @@ export default function Home() {
 					names from WordPress core blocks to hopefully give a better sense of
 					how container queries can be used in a common environment.
 				</p>
-				<p>Finally, I will often be using the words <strong>width</strong> and <strong>height</strong> when it would be more appropriate to use <strong>inline axis</strong> and <strong>block axis</strong>.  Those axes can flip directions depending on the <code>writing-mode</code> property, so do keep that in mind.</p>
+				<p>
+					Finally, I will often be using the words <strong>width</strong> and{" "}
+					<strong>height</strong> when it would be more appropriate to use{" "}
+					<strong>inline axis</strong> and <strong>block axis</strong>. Those
+					axes can flip directions depending on the <code>writing-mode</code>{" "}
+					property, so do keep that in mind.
+				</p>
 				<h2>What Will We Be Demoing?</h2>
 				<p>
 					This demo will focus on two examples, Quote and Image blocks. Whenever
@@ -72,28 +78,30 @@ export default function Home() {
 
 				<p>
 					Below you can toggle the <code>alignfull</code> class on the Columns
-					block or resize the <code>height</code> of the Image&apos;s parent block
-					in the lower right corner.
+					block or resize the <code>height</code> of the Image&apos;s parent
+					block in the lower right corner.
 				</p>
 				<p>
-					You can also resize your browser along either axis to see the
-					queries take effect.
+					You can also resize your browser along either axis to see the queries
+					take effect.
 				</p>
 
-				<SpacerBlock height={24}/>
+				<SpacerBlock height={24} />
 
 				<ButtonsWrapper>
-					<Button
-						label="Toggle Alignfull"
+					<AlignfullToggle
+						label="Add <code>.alignfull</code> class"
 						target="alignfull-target"
-						clickHandler="alignfull"
 					/>
 				</ButtonsWrapper>
 				<SpacerBlock height={48} />
 				<ColumnsBlock className="has-two-columns" id="alignfull-target">
 					<ColumnBlock>
 						<GroupBlock className="is-inline-size">
-							<QuoteBlock />
+							<QuoteBlock
+								paragraph="Sponges grow in the ocean. That just kills me. I wonder how much deeper the ocean would be if that didn't happen."
+								cite="Steven Wright"
+							/>
 						</GroupBlock>
 					</ColumnBlock>
 					<ColumnBlock>

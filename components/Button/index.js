@@ -3,8 +3,9 @@ import Check from "../SVG/Check";
 import Close from "../SVG/Close";
 import { buttonStyles } from "../../utilities/buttonStyles";
 
-export default function ButtonAlignfull(props) {
-	const { className, clickHandler, label, height, target, ...restProps } = props;
+export default function ButtonBlock(props) {
+	const { className, clickHandler, label, height, target, ...restProps } =
+		props;
 
 	const [isAriaPressed, setIsAriaPressed] = useState(false);
 
@@ -14,7 +15,7 @@ export default function ButtonAlignfull(props) {
 		setIsAriaPressed(!isAriaPressed);
 		buttonStyles(clickedBtn, isAriaPressed);
 
-		if (clickHandler === 'alignfull' && targetEl) {
+		if (clickHandler === "alignfull" && targetEl) {
 			targetEl.classList.toggle("alignfull");
 		}
 
@@ -36,8 +37,7 @@ export default function ButtonAlignfull(props) {
 				dangerouslySetInnerHTML={{
 					__html: label,
 				}}
-			></span>
-			{" "}
+			></span>{" "}
 			{isAriaPressed ? <Check /> : <Close />}
 		</button>
 	);

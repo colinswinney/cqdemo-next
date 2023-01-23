@@ -12,6 +12,11 @@
 			.resizable {
 				max-width: calc(var(--container-max) / 2 - calc(var(--spacer) / 2));
 			}
+
+			&--thirds {
+				grid-template-columns: 1fr 2fr;
+				gap: 0;
+			}
 		}
 
 		&.has-three-columns {

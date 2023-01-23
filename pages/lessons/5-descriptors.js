@@ -1,10 +1,9 @@
 import Layout from "../../components/Layout";
 import ButtonsWrapper from "../../components/ButtonsWrapper";
-import Button from "../../components/Button";
 import CodeBlock from "../../components/CodeBlock";
 import GroupBlock from "../../components/GroupBlock";
 import ImageBlock from "../../components/ImageBlock";
-
+import WritingModeToggle from "../../components/WritingModeToggle";
 
 const LESSON_TEXT = "Lesson Five";
 const LESSON_SLUG = "lesson-five";
@@ -81,29 +80,29 @@ export default function LessonFive() {
 }`}
 					</CodeBlock>
 					<style>{`
-				#aspect-ratio {
+				#wp-block-group-aspect-ratio {
 					container: aspect-ratio / size;
 					height: 50vh;
 				}
-				#aspect-ratio .wp-block-image span:nth-of-type(1) {
+				#wp-block-group-aspect-ratio .wp-block-image span:nth-of-type(1) {
 					display: none
 				}
 
 				@container aspect-ratio (min-aspect-ratio: 16 / 9) {
-					#aspect-ratio .wp-block-image::after {
+					#wp-block-group-aspect-ratio .wp-block-image::after {
 						background-color: var(--c-blue);
 					}
 
-					#aspect-ratio .wp-block-image span:nth-of-type(1) {
+					#wp-block-group-aspect-ratio .wp-block-image span:nth-of-type(1) {
 						display: inline-block;
 					}
 
-					#aspect-ratio .wp-block-image span:nth-of-type(2) {
+					#wp-block-group-aspect-ratio .wp-block-image span:nth-of-type(2) {
 						display: none;
 					}
 				}
 				`}</style>
-					<GroupBlock className="resizable" id="aspect-ratio">
+					<GroupBlock className="resizable" id="wp-block-group-aspect-ratio">
 						<ImageBlock
 							caption={`<span>Over 16 / 9</span><span>under 16 / 9</span>`}
 						/>
@@ -124,34 +123,35 @@ export default function LessonFive() {
 						</li>
 					</ul>
 					<CodeBlock>
-						{`@container (orientation: landscape) {
+						{`/* fun fact: a perfect square is portrait */
+@container (orientation: landscape) {
 	...
 }`}
 					</CodeBlock>
 					<style>{`
-				#orientation {
+				#wp-block-group-orientaion {
 					container: orientation / size;
 					height: 50vh;
 				}
-				#orientation .wp-block-image span:nth-of-type(1) {
+				#wp-block-group-orientaion .wp-block-image span:nth-of-type(1) {
 					display: none
 				}
 
 				@container orientation (orientation: landscape) {
-					#orientation .wp-block-image::after {
+					#wp-block-group-orientaion .wp-block-image::after {
 						background-color: var(--c-blue);
 					}
 
-					#orientation .wp-block-image span:nth-of-type(1) {
+					#wp-block-group-orientaion .wp-block-image span:nth-of-type(1) {
 						display: inline-block;
 					}
 
-					#orientation .wp-block-image span:nth-of-type(2) {
+					#wp-block-group-orientaion .wp-block-image span:nth-of-type(2) {
 						display: none;
 					}
 				}
 				`}</style>
-					<GroupBlock className="resizable" id="orientation">
+					<GroupBlock className="resizable" id="wp-block-group-orientaion">
 						<ImageBlock
 							caption={`<span>Landscape</span><span>Portrait</span>`}
 						/>
@@ -183,36 +183,35 @@ export default function LessonFive() {
 }`}
 					</CodeBlock>
 					<style>{`
-				#block-size {
+				#wp-block-group-block-size {
 					container: block-size / size;
 					height: 50vh;
 				}
-				#block-size .wp-block-image span:nth-of-type(1) {
+				#wp-block-group-block-size .wp-block-image span:nth-of-type(1) {
 					display: none
 				}
 
 				@container block-size (min-block-size: 300px) {
-					#block-size .wp-block-image::after {
+					#wp-block-group-block-size .wp-block-image::after {
 						background-color: var(--c-blue);
 					}
 
-					#block-size .wp-block-image span:nth-of-type(1) {
+					#wp-block-group-block-size .wp-block-image span:nth-of-type(1) {
 						display: inline-block;
 					}
 
-					#block-size .wp-block-image span:nth-of-type(2) {
+					#wp-block-group-block-size .wp-block-image span:nth-of-type(2) {
 						display: none;
 					}
 				}
 				`}</style>
 					<ButtonsWrapper>
-						<Button
+						<WritingModeToggle
 							label="Toggle <code>writing-mode: vertical-rl</code>"
-							target="block-size"
-							clickHandler="writing-mode"
+							target="wp-block-group-block-size"
 						/>
 					</ButtonsWrapper>
-					<GroupBlock className="resizable" id="block-size">
+					<GroupBlock className="resizable" id="wp-block-group-block-size">
 						<ImageBlock
 							caption={`<span>Over 300px</span><span>under 300px</span>`}
 						/>
@@ -244,36 +243,35 @@ export default function LessonFive() {
 }`}
 					</CodeBlock>
 					<style>{`
-				#inline-size {
+				#wp-block-group-inline-size {
 					container: inline-size / size;
 					height: 50vh;
 				}
-				#inline-size .wp-block-image span:nth-of-type(1) {
+				#wp-block-group-inline-size .wp-block-image span:nth-of-type(1) {
 					display: none
 				}
 
 				@container inline-size (min-inline-size: 300px) {
-					#inline-size .wp-block-image::after {
+					#wp-block-group-inline-size .wp-block-image::after {
 						background-color: var(--c-blue);
 					}
 
-					#inline-size .wp-block-image span:nth-of-type(1) {
+					#wp-block-group-inline-size .wp-block-image span:nth-of-type(1) {
 						display: inline-block;
 					}
 
-					#inline-size .wp-block-image span:nth-of-type(2) {
+					#wp-block-group-inline-size .wp-block-image span:nth-of-type(2) {
 						display: none;
 					}
 				}
 				`}</style>
 					<ButtonsWrapper>
-						<Button
+						<WritingModeToggle
 							label="Toggle <code>writing-mode: vertical-rl</code>"
-							target="inline-size"
-							clickHandler="writing-mode"
+							target="wp-block-group-inline-size"
 						/>
 					</ButtonsWrapper>
-					<GroupBlock className="resizable" id="inline-size">
+					<GroupBlock className="resizable" id="wp-block-group-inline-size">
 						<ImageBlock
 							caption={`<span>Over 300px</span><span>under 300px</span>`}
 						/>

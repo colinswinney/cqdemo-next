@@ -26,7 +26,7 @@ export default function LessonOne() {
 					context.
 				</p>
 				<CodeBlock>
-					{`@container sidebar (width > 18.75em) {
+					{`@container sidebar (width > 450px) {
 
 	.wp-block-quote {
 		...
@@ -41,7 +41,7 @@ export default function LessonOne() {
 					If no parent has a container-type set, no changes will be applied.
 				</p>
 				<CodeBlock>
-					{`@container (width > 18.75em) {
+					{`@container (width > 450px) {
 
 	.wp-block-quote {
 		...

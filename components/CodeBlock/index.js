@@ -2,7 +2,7 @@ export default function CodeBlock({ children, className, editable, lang, ...rest
 	const language = lang ? "language-" + lang : "language-css";
 	return (
 		<pre className={`wp-block-code${className ? " " + className : ""}`}>
-			<code className={language} contenteditable={editable} {...restProps}>
+			<code className={language} {...restProps}>
 				{children}
 			</code>
 		</pre>

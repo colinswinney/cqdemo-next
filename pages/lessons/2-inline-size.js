@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import Layout from "../../components/Layout";
 import ButtonsWrapper from "../../components/ButtonsWrapper";
-import Button from "../../components/Button";
+import AlignfullToggle from "../../components/AlignfullToggle";
 import CodeBlock from "../../components/CodeBlock";
 import ColumnsBlock from "../../components/ColumnsBlock";
 import ColumnBlock from "../../components/ColumnBlock";
@@ -51,19 +51,6 @@ export default function LessonTwo() {
 					containing a Quote.
 				</p>
 
-				<ColumnsBlock className={`has-two-columns ${LESSON_SLUG}-example`}>
-					<ColumnBlock id="column-one">
-						<GroupBlock className="is-inline-size">
-							<QuoteBlock paragraph="Should I use lorem ipsum?" />
-						</GroupBlock>
-					</ColumnBlock>
-					<ColumnBlock>
-						<GroupBlock className="is-inline-size">
-							<QuoteBlock paragraph="Let's just keep it short." />
-						</GroupBlock>
-					</ColumnBlock>
-				</ColumnsBlock>
-
 				<h3>Markup</h3>
 				<p>
 					First let&apos;s review the markup, noting again that we are wrapping
@@ -89,6 +76,25 @@ export default function LessonTwo() {
 </div>`}
 				</CodeBlock>
 
+				<ColumnsBlock className={`has-two-columns ${LESSON_SLUG}-example`}>
+					<ColumnBlock id="column-one">
+						<GroupBlock className="is-inline-size">
+							<QuoteBlock
+								paragraph="When I woke up this morning my girlfriend asked me, 'Did you sleep good?' I said 'No, I made a few mistakes.'"
+								cite="Steven Wright"
+							/>
+						</GroupBlock>
+					</ColumnBlock>
+					<ColumnBlock>
+						<GroupBlock className="is-inline-size">
+							<QuoteBlock
+								paragraph="Right now I'm having amnesia and deja vu at the same time... I think I've forgotten this before."
+								cite="Steven Wright"
+							/>
+						</GroupBlock>
+					</ColumnBlock>
+				</ColumnsBlock>
+
 				<h3>Styles</h3>
 				<p>
 					Next let&apos;s setup our styles, first declaring a container context
@@ -103,8 +109,9 @@ export default function LessonTwo() {
 }
 
 /* query against it's dimensions */
-@container wp-block-group (width > 18.75em) {
+@container wp-block-group (width > 450px) {
 
+	/* restyle a child of your container */
 	.wp-block-quote {
 		background-color: var(--c-gray);
 		...
@@ -132,10 +139,9 @@ export default function LessonTwo() {
 							onChange={handleSlider}
 						></input>
 					</div>
-					<Button
-						label="Toggle Alignfull"
+					<AlignfullToggle
+						label="Add <code>.alignfull</code> class"
 						target="alignfull-target"
-						clickHandler="alignfull"
 					/>
 				</ButtonsWrapper>
 
@@ -146,12 +152,18 @@ export default function LessonTwo() {
 				>
 					<ColumnBlock id="column-one">
 						<GroupBlock className="is-inline-size">
-							<QuoteBlock paragraph="Should I use lorem ipsum?" />
+							<QuoteBlock
+								paragraph="Everywhere is within walking distance if you have the time."
+								cite="Steven Wright"
+							/>
 						</GroupBlock>
 					</ColumnBlock>
 					<ColumnBlock>
 						<GroupBlock className="is-inline-size">
-							<QuoteBlock paragraph="Let's just keep it short." />
+							<QuoteBlock
+								paragraph="I have an existential map. It has 'You are here' written all over it."
+								cite="Steven Wright"
+							/>
 						</GroupBlock>
 					</ColumnBlock>
 				</ColumnsBlock>

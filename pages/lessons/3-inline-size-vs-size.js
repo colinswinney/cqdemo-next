@@ -59,7 +59,8 @@ export default function LessonThree() {
 					just <code>padding</code>).
 				</p>
 				<p>
-					Select a <strong>container-type</strong> below to see how switching types can affect layout.
+					Select a <strong>container-type</strong> below to see how switching
+					types can affect layout.
 				</p>
 				<CodeBlock>{`.wp-block-group { container-type: ... }`}</CodeBlock>
 				<ButtonsWrapper className="space-between">
@@ -92,30 +93,35 @@ export default function LessonThree() {
 					style={{ container: "wp-block-group / inline-size" }}
 					id="group-to-toggle"
 				>
-					<QuoteBlock />
+					<QuoteBlock
+						paragraph="If it's a penny for your thoughts and you put in your two cents worth, then someone, somewhere is making a penny."
+						cite="Steven Wright"
+					/>
 				</GroupBlock>
 				<section
 					aria-label="An example banner ad"
 					className="alignfull content-container"
 					style={{
 						backgroundColor: "rgb(200 0 0 / 5%)",
-						display: 'grid',
+						display: "grid",
 						padding: "3em 0",
-						placeItems: 'center'
+						placeItems: "center",
 					}}
 				>
 					<h2
 						style={{
-							color: 'var(--c-primary)',
+							color: "var(--c-primary)",
 							marginTop: 0,
-							maxWidth: '15ch',
+							maxWidth: "15ch",
 							textAlign: "center",
 						}}
 					>
 						The Worlds Most Legible Website
 					</h2>
 					<ButtonsWrapper>
-						<button disabled className="button">Learn More</button>
+						<button disabled className="button">
+							Learn More
+						</button>
 					</ButtonsWrapper>
 				</section>
 			</Layout>

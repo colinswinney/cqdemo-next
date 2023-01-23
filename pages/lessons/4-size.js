@@ -1,13 +1,7 @@
 import Layout from "../../components/Layout";
-import ButtonsWrapper from "../../components/ButtonsWrapper";
-import Button from "../../components/Button";
 import CodeBlock from "../../components/CodeBlock";
-import ColumnsBlock from "../../components/ColumnsBlock";
-import ColumnBlock from "../../components/ColumnBlock";
 import GroupBlock from "../../components/GroupBlock";
 import ImageBlock from "../../components/ImageBlock";
-import QuoteBlock from "../../components/QuoteBlock";
-import SpacerBlock from "../../components/SpacerBlock";
 
 const LESSON_TEXT = "Lesson Four";
 const LESSON_SLUG = "lesson-four";
@@ -68,7 +62,7 @@ export default function LessonFour() {
 					block, while also explicitly setting <code>height: 50vh</code> to
 					query against (remember, <strong>size</strong> types have no intrisic
 					height). Then we will write our query for when <code>50vh</code> is
-					less than <code>300px</code> .
+					less than <code>300px</code>.
 				</p>
 				<CodeBlock>
 					{`.wp-block-group.is-size {

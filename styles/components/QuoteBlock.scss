@@ -12,8 +12,8 @@
 		// font-size: clamp(1rem, calc(0.02rem + 4.18vw), 3rem);
 		// font-size: clamp(1rem, calc(0.02rem + 4.18cqw), 3rem);
 		// font-size: max(1em, 4cqi);
-		margin: 0;
 		font-weight: 700;
+		margin: 0;
 	}
 
 	& cite {
@@ -26,14 +26,27 @@
 		margin-top: 1em;
 	}
 
-	@container wp-block-group (width > 18.75em) {
-		background-position: center 1rem;
-		border: none;
-		padding: 6rem 3rem 3rem;
-		text-align: center;
+	&:not(.no-container-styles) {
 
-		.lesson-two-example & {
-			background-color: var(--c-gray);
+		@container wp-block-group (width > 450px) {
+
+			background-position: center 1rem;
+			border: none;
+			margin: 0 auto;
+			padding: 6rem 3rem 3rem;
+			text-align: var(--text-align, center);
+
+			p,
+			cite {
+				max-width: 50ch;
+				margin-inline: auto;
+			}
+
+			.lesson-two-example & {
+				background-color: var(--c-gray);
+			}
 		}
 	}
+
+
 }
