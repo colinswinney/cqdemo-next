@@ -18,7 +18,7 @@ export default function LessonTen() {
 			>
 				<h2>No Need for Parents</h2>
 				<p>
-					Througout these demos, I may have given the impression that the
+					Throughout these demos, I may have given the impression that the
 					element you wish to apply new styles to <em>requires</em> a direct
 					wrapping element. It does not.
 				</p>
