@@ -12,7 +12,7 @@ export default function LessonTen() {
 	return (
 		<>
 			<Layout
-				metaDescription="Clarying some container concepts"
+				metaDescription="Clarifying some container concepts"
 				metaTitle={LESSON_TEXT}
 				title={`<span className="eyebrow">${LESSON_TEXT} </span>A Little Clarification<br/><span style="margin-top: 0.25em;display: block">🤦🏻‍♂️</span>`}
 			>
