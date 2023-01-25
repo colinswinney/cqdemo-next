@@ -127,10 +127,24 @@ export default function Layout({ children, metaDescription, metaTitle, title }) 
 								<Link
 									href="/lessons/9-wordpress-snippet"
 									className={
-										router.pathname == "/lessons/9-wordpress-snippet" ? "active" : ""
+										router.pathname == "/lessons/9-wordpress-snippet"
+											? "active"
+											: ""
 									}
 								>
 									WordPress Snippet
+								</Link>
+							</li>
+							<li>
+								<Link
+									href="/lessons/10-a-little-clarification"
+									className={
+										router.pathname == "/lessons/10-a-little-clarification"
+											? "active"
+											: ""
+									}
+								>
+									A Little Clarification
 								</Link>
 							</li>
 						</ol>

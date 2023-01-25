@@ -17,9 +17,9 @@ export default function LessonNine() {
 				<h2>Get Started in WordPress</h2>
 				<p>
 					We&apos;ve been using a Group Block as a quick way to show these
-					concepts, however, on a real project, you may
-					wish to leave that block alone for other purposes. One alternative we
-					could do is filter our target blocks and wrap them in a container.
+					concepts, however, on a real project, you may wish to leave that block
+					alone for other purposes. One alternative we could do is filter our
+					target blocks and wrap them in a container.
 				</p>
 				<code>block-filters/my-container.js</code>
 
@@ -49,7 +49,7 @@ const wrapBlockInContainerEdit = createHigherOrderComponent((BlockListBlock) => 
 			return <BlockListBlock {...props} />;
 		}
 
-		// return the element wrapped in a container
+		// return the element wrapped in a container, you would need to further modify for alignment classes etc.
 		return (
 			<div className={\`my-container my-container--\${name.replace("/", "-")}\`}>
 				<BlockListBlock {...props} />
@@ -88,7 +88,7 @@ function wrapBlockInContainerSave(element, blockType) {
 		return element;
 	}
 
-	// return the element wrapped in a container
+	// return the element wrapped in a container, you would need to further modify for alignment classes etc.
 	return <div className={\`my-container my-container--\${name.replace('/', '-')}\`}>{element}</div>;
 }
 
